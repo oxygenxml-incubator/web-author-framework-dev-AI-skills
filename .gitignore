@@ -1,0 +1,14 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Agent / IDE tool roots (canonical skills live in skills/)
+.claude/
+.cursor/
+.agent/
+.codex/

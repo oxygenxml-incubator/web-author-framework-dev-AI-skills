@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  XML Schema for Oxygen .scenarios files (validation scenarios).
+
+  These files are produced by Oxygen's serialization machinery and store the
+  validation scenarios that are bundled with a framework. They use a generic
+  "serialized ordered map" wrapper, with two fixed entries:
+
+    1. validation.scenarios                 -> array of <validationScenario>
+    2. validation.scenarios.load.from.project -> Boolean
+
+  This schema models the structure observed in the repository and is meant
+  to be strict enough to be useful as a generation target for an AI model,
+  but permissive in places that vary across frameworks (engine type, advanced
+  settings, schema URI).
+
+  Notes:
+   - Field order matters: Oxygen always writes the fields in the same order
+     for a given object type. When generating, keep the field order shown
+     here.
+   - The root element carries xml:space="preserve". Whitespace in the source
+     is whitespace in the output.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xml="http://www.w3.org/XML/1998/namespace"
+           elementFormDefault="qualified">
+
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+             schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+  <!-- =====================================================================
+       Generic Oxygen serialization wrappers
+       ===================================================================== -->
+
+  <xs:complexType name="StringType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="BooleanType">
+    <xs:simpleContent>
+      <xs:restriction base="xs:anyType">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="IntegerType">
+    <xs:simpleContent>
+      <xs:extension base="xs:integer"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Empty <null/> marker used for optional/unset object fields. -->
+  <xs:complexType name="NullType">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       SchemaTypes (matches ro.sync.basic.xml.schema.SchemaTypes)
+       =====================================================================
+       0  ST_NOT_SPECIFIED
+       1  ST_DTD
+       2  ST_XMLSCHEMA
+       3  ST_RNC               (Relax NG compact)
+       4  ST_RNG               (Relax NG XML)
+       5  ST_XMLSCHEMA_SCH     (XML Schema + Schematron)
+       6  ST_RNG_SCH           (Relax NG XML + Schematron)
+       7  ST_SCH               (Schematron)
+       9  ST_NVDL
+       10 ST_JSON              (JSON instance, validated against JSON Schema)
+       11 ST_JSON_SCHEMA       (JSON meta schema)
+  -->
+  <xs:simpleType name="SchemaTypeIdValue">
+    <xs:restriction base="xs:integer">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="9"/>
+      <xs:enumeration value="10"/>
+      <xs:enumeration value="11"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="SchemaTypeIdElement">
+    <xs:simpleContent>
+      <xs:extension base="SchemaTypeIdValue"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       validationInputType (MIME-like discriminator on the validation unit)
+       ===================================================================== -->
+  <xs:simpleType name="ValidationInputTypeValue">
+    <xs:annotation>
+      <xs:documentation>
+        Known values observed in shipped frameworks. Other values are valid
+        too; an AI generator should prefer one of these for compatibility.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="text/xml"/>
+      <xs:enumeration value="text/sch"/>
+      <xs:enumeration value="text/any"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ValidationInputTypeElement">
+    <xs:simpleContent>
+      <xs:extension base="ValidationInputTypeValue"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       Field wrapper. Fields appear inside an object and carry @name.
+       The actual content depends on the parent object's contract; we use
+       multiple specialized field types below.
+       ===================================================================== -->
+
+  <!-- A field whose body is a single <String>. -->
+  <xs:complexType name="StringField">
+    <xs:sequence>
+      <xs:element name="String" type="StringType"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="BooleanField">
+    <xs:sequence>
+      <xs:element name="Boolean" type="BooleanType"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- A field whose body is either <null/> or a <String>. -->
+  <xs:complexType name="OptionalStringField">
+    <xs:choice>
+      <xs:element name="null" type="NullType"/>
+      <xs:element name="String" type="StringType"/>
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       validationUnitSchema (only present when validationSchema is non-null)
+       ===================================================================== -->
+
+  <xs:complexType name="ValidationUnitSchema">
+    <xs:sequence>
+      <xs:element name="field" type="OptionalStringField">
+        <xs:annotation>
+          <xs:documentation>name="dtdSchemaPublicID" - optional public ID for DTD schemas.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="field" type="OptionalStringField">
+        <xs:annotation>
+          <xs:documentation>name="schematronPhase" - phase id for Schematron, or null.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="field">
+        <xs:annotation>
+          <xs:documentation>name="type" - integer from SchemaTypes.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Integer" type="SchemaTypeIdElement"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="type"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field" type="StringField" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            name="uri" - URI of the schema file. May reference Oxygen
+            editor variables, e.g. ${framework}/schemas/foo.json.
+            Optional; absent for built-in/no-schema cases.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ValidationSchemaField">
+    <xs:choice>
+      <xs:element name="null" type="NullType"/>
+      <xs:element name="validationUnitSchema" type="ValidationUnitSchema"/>
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" use="required" fixed="validationSchema"/>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       validationEngine
+       ===================================================================== -->
+
+  <xs:complexType name="ValidationEngine">
+    <xs:annotation>
+      <xs:documentation>
+        Known engineType values include (non-exhaustive):
+          "&lt;Default engine&gt;", "DITA Validation",
+          "DITA Map Validation and Completeness Check",
+          "DITA-OT Project Validation and Completeness Check",
+          "Table Layout Validation", "Saxon-EE", "Xerces",
+          "W3C HTML Validator", "HTML Schematron Validator",
+          "JSON Schematron Validator".
+        Custom engines registered by add-ons are also valid.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="field">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="String" type="StringType"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="engineType"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Boolean" type="BooleanType"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="allowsAutomaticValidation"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       validationUnitType
+       ===================================================================== -->
+
+  <xs:complexType name="ValidationUnitType">
+    <xs:sequence>
+      <xs:element name="field">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="String" type="ValidationInputTypeElement"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="validationInputType"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       validationUnit
+       ===================================================================== -->
+
+  <xs:complexType name="ValidationUnit">
+    <xs:sequence>
+      <xs:element name="field">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="validationUnitType" type="ValidationUnitType"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="validationType"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="String" type="StringType"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="url"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="validationEngine" type="ValidationEngine"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="validationEngine"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Boolean" type="BooleanType"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="allowAutomaticValidation"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field">
+        <xs:annotation>
+          <xs:documentation>
+            name="extensions" - typically &lt;null/&gt;. When present as a list,
+            it carries engine-specific extension descriptors; modeled here as
+            null to match the shipped scenarios.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="null" type="NullType"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="extensions"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field" type="ValidationSchemaField"/>
+      <xs:element name="field" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            name="validationAdvancedSettings" - optional. Either &lt;null/&gt;
+            or an engine-specific PO object (e.g.
+            DitaCompletenessValidationUnitAdvancedSettingsPO). Modeled as
+            lax to allow framework-specific shapes.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="null" type="NullType"/>
+            <xs:any namespace="##any" processContents="lax"/>
+          </xs:choice>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="validationAdvancedSettings"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       validationScenario
+       ===================================================================== -->
+
+  <xs:complexType name="ValidationScenario">
+    <xs:sequence>
+      <xs:element name="field">
+        <xs:annotation>
+          <xs:documentation>name="pairs" - list of validation units run in order.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="list">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="validationUnit" type="ValidationUnit" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="pairs"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field">
+        <xs:annotation>
+          <xs:documentation>name="type" - constant string "Validation_scenario".</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="String">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:restriction base="StringType">
+                    <xs:enumeration value="Validation_scenario"/>
+                  </xs:restriction>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="type"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="field">
+        <xs:annotation>
+          <xs:documentation>name="name" - human-readable scenario name; shown in Oxygen UI.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="String" type="StringType"/>
+          </xs:sequence>
+          <xs:attribute name="name" type="xs:string" use="required" fixed="name"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       Top-level entries of the serializableOrderedMap
+       ===================================================================== -->
+
+  <xs:complexType name="ValidationScenarioArray">
+    <xs:sequence>
+      <xs:element name="validationScenario" type="ValidationScenario"
+                  minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- entry #1: <String>validation.scenarios</String> + <validationScenario-array> -->
+  <xs:complexType name="ScenariosEntry">
+    <xs:sequence>
+      <xs:element name="String">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="validation.scenarios"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="validationScenario-array" type="ValidationScenarioArray"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- entry #2: <String>validation.scenarios.load.from.project</String> + <Boolean> -->
+  <xs:complexType name="LoadFromProjectEntry">
+    <xs:sequence>
+      <xs:element name="String">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="validation.scenarios.load.from.project"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Boolean" type="BooleanType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- =====================================================================
+       Root element
+       ===================================================================== -->
+
+  <xs:element name="serialized">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="serializableOrderedMap">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="entry" type="ScenariosEntry"/>
+              <xs:element name="entry" type="LoadFromProjectEntry"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute ref="xml:space" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
