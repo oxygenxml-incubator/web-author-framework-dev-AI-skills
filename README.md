@@ -98,16 +98,19 @@ The skills support a wide range of Web Author framework development tasks, inclu
 These capabilities support both creating frameworks from scratch and extending existing ones.
 
 ## Typical Workflow
-
+ 
 A typical development workflow looks like this:
-
-1. Install the skills at the Web Author kit root
-2. Start Web Author
+ 
+1. Install the skills at the Web Author kit root - see [Installation](#installation)
+2. Start and configure Web Author
 3. Ask the agent to create or modify a framework extension
-4. Review generated changes in `user-frameworks/`
-5. Validate behavior in Web Author
-6. Optionally use Chrome DevTools MCP for browser-side verification
+4. Ask the agent to initialize a Git repository inside your framework directory and create a `README.md` describing the framework's purpose, structure, and conventions
+5. Review generated changes in `user-frameworks/`
+6. Validate behavior in Web Author
+7. Optionally use Chrome DevTools MCP for browser-side verification
 
+We recommend using a Git repository for the framework. This makes it easy to inspect diffs, revert unwanted changes, and iterate safely as the agent modifies files. Maintaining a `README.md` inside the framework also helps preserve project context across multiple Claude Code sessions — the agent can read it at the start of a new chat instead of re-deriving the framework's structure from scratch, which reduces token usage and keeps development consistent across sessions.
+ 
 This workflow supports rapid iteration while keeping framework customization transparent and reviewable.
 
 ## Important Safety Notice
