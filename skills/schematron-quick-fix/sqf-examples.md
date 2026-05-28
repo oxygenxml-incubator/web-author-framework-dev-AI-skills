@@ -1,6 +1,6 @@
 # SQF Examples (Curated)
 
-Working SQF patterns from the official oXygen User Guide — primarily [Examples of Schematron Rules and Quick Fixes](https://www.oxygenxml.com/doc/ug-editor/topics/examples-schematron-sqf-x.html), plus embedded examples in [Defining Schematron Quick Fixes](https://www.oxygenxml.com/doc/ug-editor/topics/customizing-sqf.html) and [Basic SQF Operations](https://www.oxygenxml.com/doc/ug-editor/topics/sqf-operations.html). Tweak XPath to match the user's vocabulary.
+Working SQF patterns from the official oXygen User Guide — primarily [Examples of Schematron Rules and Quick Fixes](https://www.oxygenxml.com/doc/ug-editor/topics/examples-schematron-sqf-x.md), plus embedded examples in [Defining Schematron Quick Fixes](https://www.oxygenxml.com/doc/ug-editor/topics/customizing-sqf.md) and [Basic SQF Operations](https://www.oxygenxml.com/doc/ug-editor/topics/sqf-operations.md). Tweak XPath to match the user's vocabulary.
 
 More patterns: [community samples repo](https://github.com/schematron-quickfix/sqf/tree/master/samples), [oXygen UG `rulesAdvanced.sch`](https://github.com/oxygenxml/userguide/blob/master/DITA/rules/rulesAdvanced.sch), `$OXYGEN_INSTALL_DIR/samples/schematron/`.
 

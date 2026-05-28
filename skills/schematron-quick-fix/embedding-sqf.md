@@ -4,8 +4,8 @@ When the framework's primary schema is **XSD** or **RNG**, you can ship SQF insi
 
 Full references (read via `oxygen-docs`):
 
-- [Embedding SQF in Relax NG or XML Schema](https://www.oxygenxml.com/doc/ug-editor/topics/embed-sqf-in-rng-xsd.html)
-- [Embedding Schematron Rules in XML Schema or RELAX NG](https://www.oxygenxml.com/doc/ug-editor/topics/combined_RNG_and_SCH.html) — broader page; covers RNG compact / annotation form.
+- [Embedding SQF in Relax NG or XML Schema](https://www.oxygenxml.com/doc/ug-editor/topics/embed-sqf-in-rng-xsd.md)
+- [Embedding Schematron Rules in XML Schema or RELAX NG](https://www.oxygenxml.com/doc/ug-editor/topics/combined_RNG_and_SCH.md) — broader page; covers RNG compact / annotation form.
 
 ## When to embed vs. ship a standalone `.sch`
 
@@ -19,7 +19,7 @@ The `<sqf:fix>` body is identical either way; only the wrapping differs.
 
 ## Required validation toggle
 
-Embedded SQF is **not surfaced** unless the validation scenario opts in. In the scenario's validation unit, set **Schema type** = `XML Schema` or `Relax NG` and tick **Embedded Schematron rules**. **This is per-validation-unit and is not enabled by default** — first thing to check when embedded rules don't appear. See [validating XML against a schema](https://www.oxygenxml.com/doc/ug-editor/topics/validating-XML-documents-against-schema.html).
+Embedded SQF is **not surfaced** unless the validation scenario opts in. In the scenario's validation unit, set **Schema type** = `XML Schema` or `Relax NG` and tick **Embedded Schematron rules**. **This is per-validation-unit and is not enabled by default** — first thing to check when embedded rules don't appear. See [validating XML against a schema](https://www.oxygenxml.com/doc/ug-editor/topics/validating-XML-documents-against-schema.md).
 
 ## XSD — inside `<xsd:annotation><xsd:appinfo>`
 

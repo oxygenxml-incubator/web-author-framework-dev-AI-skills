@@ -34,7 +34,7 @@ Use this skill for any work involving the Schematron Quick Fix extension to ISO 
    ```xml
    xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
    ```
-5. Validate the `.sch` itself in oXygen against the built-in SQF schema — see <https://www.oxygenxml.com/doc/ug-editor/topics/validating-sqf.html>. Catches missing `@target`, malformed XPath, undeclared namespaces the engine would otherwise silently skip.
+5. Validate the `.sch` itself in oXygen against the built-in SQF schema — see <https://www.oxygenxml.com/doc/ug-editor/topics/validating-sqf.md>. Catches missing `@target`, malformed XPath, undeclared namespaces the engine would otherwise silently skip.
 6. Ship via a framework: `framework-integration.md` (Route A — `.exf` `<validationScenarios>` + `.scenarios`, recommended; Route B — `<defaultSchema schemaType="sch">` for standalone frameworks).
 7. Restart the kit per the `ai-framework-developer` rules (full stop + start; `user-frameworks/` is scanned at startup only).
 8. Verify in the running editor. For Web Author, use `chrome-mcp-usage.md` (in `ai-framework-developer`) to screenshot the proposal popup — **WA SQF parity with Desktop is not documented one-for-one; verify visually**, do not promise parity from the manual alone.

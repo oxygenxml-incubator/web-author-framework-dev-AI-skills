@@ -83,7 +83,7 @@ Pick by use case:
 - **`<removeCss>` / `<removeEntry>`** — see the rule below; placeholder form must match what the base declared.
 
 
-- editor variables: <https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.html>
+- editor variables: <https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.md>
 
 **Never ship absolute machine paths.** They break the moment the kit moves.
 

@@ -4,7 +4,7 @@ Reference for **how validation scenarios ship with frameworks** when not authore
 
 ## Official docs (behavior, not file grammar)
 
-- Wire-up from a Framework Extension Script: **`<validationScenarios>`** in `.exf` with `<addScenarios>`, `<removeScenario>`, `<defaultScenarios>` — see [Framework Extension Script File](https://www.oxygenxml.com/doc/ug-editor/topics/framework-customization-script-usecases.html).
+- Wire-up from a Framework Extension Script: **`<validationScenarios>`** in `.exf` with `<addScenarios>`, `<removeScenario>`, `<defaultScenarios>` — see [Framework Extension Script File](https://www.oxygenxml.com/doc/ug-editor/topics/framework-customization-script-usecases.md).
 
 ## At a glance
 

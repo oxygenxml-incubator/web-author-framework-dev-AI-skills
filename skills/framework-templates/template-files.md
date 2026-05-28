@@ -2,7 +2,7 @@
 
 Authoritative shape for the `templates/` folder shipped inside the `.exf` extension. Cross-check against a bundled framework (e.g. `<BUNDLED_FRAMEWORKS_DIR>/dita/templates/topic/`) before emitting anything unusual.
 
-Full reference: <https://www.oxygenxml.com/doc/ug-editor/topics/customizing-templates.html> (`displayName`, prefix/suffix, icons, i18n, `<?oxy-placeholder?>` PI) and <https://www.oxygenxml.com/doc/ug-editor/topics/dg-file-templates.md>. Read via the `oxygen-docs` skill.
+Full reference: <https://www.oxygenxml.com/doc/ug-editor/topics/customizing-templates.md> (`displayName`, prefix/suffix, icons, i18n, `<?oxy-placeholder?>` PI) and <https://www.oxygenxml.com/doc/ug-editor/topics/dg-file-templates.md>. Read via the `oxygen-docs` skill.
 
 ## Folder layout
 
@@ -47,7 +47,7 @@ The wizard's top-level **Popular** category aggregates templates from *all* fram
 
 Bundled reference: `<BUNDLED_FRAMEWORKS_DIR>/dita/templates/topic/Topic.properties` ships with `tags=popular`.
 
-Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/new-dialog-sa.html>.
+Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/new-dialog-sa.md>.
 
 ## Templates are skeletons, not sample documents
 
@@ -70,7 +70,7 @@ Two routes for "type-here" hints — pick by scope.
 </topic>
 ```
 
-The element holding the PI must contain *no other content, not even whitespace* (indentation inside the element breaks rendering). Default choice for a one-off template. Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/customizing-templates.html#adding_placeholders_or_hints_in_a_document_templa>.
+The element holding the PI must contain *no other content, not even whitespace* (indentation inside the element breaks rendering). Default choice for a one-off template. Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/customizing-templates.md#adding_placeholders_or_hints_in_a_document_templa>.
 
 **Route B — `-oxy-placeholder-content` CSS** (per-doctype, scoped). Leave elements empty; add a CSS rule. Used in bundled `<BUNDLED_FRAMEWORKS_DIR>/dita/css/hints/hints.css`:
 
@@ -83,7 +83,7 @@ The element holding the PI must contain *no other content, not even whitespace* 
 }
 ```
 
-Scope hints to documents from *this* template with an `outputclass` (or another marker) on the seed's root and a `[outputclass~="..."]` selector. Hybrid extensions (templates + CSS) keep both blocks in the **same** `.exf` — see `exf-templates-block.md`. Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/dg-placeholder-css-extension.html>.
+Scope hints to documents from *this* template with an `outputclass` (or another marker) on the seed's root and a `[outputclass~="..."]` selector. Hybrid extensions (templates + CSS) keep both blocks in the **same** `.exf` — see `exf-templates-block.md`. Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/dg-placeholder-css-extension.md>.
 
 **When to pick which**:
 
@@ -96,7 +96,7 @@ Scope hints to documents from *this* template with an `outputclass` (or another 
 
 ## Editor variables in seed content
 
-Expanded **once**, at file-creation time. Common ones in templates: `${id}` (generated unique id — use as `id="prefix_${id}"`), `${caret}` (cursor landing position), `${date(yyyy-MM-dd)}`, `${user.name}`. Full list: <https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.html>. For **Web Author**, the grounded subset of what actually expands in seeds lives in `editor-variables-web-author.md` in the `ai-framework-developer` skill — load it whenever a WA seed contains `${...}`.
+Expanded **once**, at file-creation time. Common ones in templates: `${id}` (generated unique id — use as `id="prefix_${id}"`), `${caret}` (cursor landing position), `${date(yyyy-MM-dd)}`, `${user.name}`. Full list: <https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.md>. For **Web Author**, the grounded subset of what actually expands in seeds lives in `editor-variables-web-author.md` in the `ai-framework-developer` skill — load it whenever a WA seed contains `${...}`.
 
 Typo traps that fail silently in the saved file: `$ {id}` (extra space) and `${Id}` (wrong case) — neither is expanded. Keep `${id}` inside text or attribute values.
 

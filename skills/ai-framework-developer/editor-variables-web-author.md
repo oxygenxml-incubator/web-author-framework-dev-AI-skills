@@ -7,7 +7,7 @@
 
 **Do NOT apply these rules to desktop oXygen Editor / Author** — desktop has different (broader) variable support and different context rules, and is not in scope here.
 
-Source: [`/doc/ug-waCustom/topics/webapp_editor_variables.html`](https://www.oxygenxml.com/doc/ug-waCustom/topics/webapp_editor_variables.html). The official page lists which variables Web Author *processes* but does **not** distinguish the contexts in which each is processed (template seed vs. code template vs. Author-mode operation vs. transformation scenario). The tables below add that.
+Source: [`/doc/ug-waCustom/topics/webapp_editor_variables.html`](https://www.oxygenxml.com/doc/ug-waCustom/topics/webapp_editor_variables.md). The official page lists which variables Web Author *processes* but does **not** distinguish the contexts in which each is processed (template seed vs. code template vs. Author-mode operation vs. transformation scenario). The tables below add that.
 
 ## Variables that expand correctly in template seeds
 
@@ -96,4 +96,4 @@ Workarounds when the captured value must appear in two places (e.g. an `<xref>` 
 ${ask('Provide a date', generic, '${date(yyyy-MM-dd)}')}
 ```
 
-For the full desktop syntax, `@id` + `${answer(...)}`, and `textarea`, see [`/doc/ug-editor/topics/editor-variables.html`](https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.html).
+For the full desktop syntax, `@id` + `${answer(...)}`, and `textarea`, see [`/doc/ug-editor/topics/editor-variables.html`](https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.md).

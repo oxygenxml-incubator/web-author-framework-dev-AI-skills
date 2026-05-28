@@ -43,7 +43,7 @@ java.security.AccessControlException: access denied ("java.io.FilePermission"
 - **Fix**: use `${frameworkDir}` instead — same directory, plain file-path form, no `file:` prefix.
 - The same bug doesn't bite `<addCss>` because the CSS loader strips the `file:` prefix correctly.
 
-Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.html>.
+Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.md>.
 
 ### 4. `category.properties` in the wrong place
 

@@ -98,4 +98,4 @@ Makes every element visible — useful as a starting point before real styling l
 2. Restart Web Author per the `ai-framework-developer` rules (full stop+start; `user-frameworks/` is scanned at startup only).
 3. Tail `tomcat/logs/oxygen.log` for `Loading user uploaded frameworks from:` to confirm the extension loaded.
 
-Reference: <https://www.oxygenxml.com/doc/versions/28.1.0/ug-waCustom/topics/wa-create-framework-from-scratch.html>
+Reference: <https://www.oxygenxml.com/doc/versions/28.1.0/ug-waCustom/topics/wa-create-framework-from-scratch.md>

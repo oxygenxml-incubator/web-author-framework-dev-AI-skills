@@ -86,4 +86,4 @@ For deep diagnosis see `web-author-logs.md` in this skill — enable the relevan
 
 ## Reference
 
-Official topic: <https://www.oxygenxml.com/doc/ug-editor/topics/framework-customization-script-usecases.html> (read the `.md` via `oxygen-docs`).
+Official topic: <https://www.oxygenxml.com/doc/ug-editor/topics/framework-customization-script-usecases.md> (read the `.md` via `oxygen-docs`).

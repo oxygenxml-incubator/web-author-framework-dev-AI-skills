@@ -4,11 +4,11 @@ Attribute-level reference for the Schematron Quick Fix vocabulary. For the canon
 
 Source pages (cite `.html`, read `.md`):
 
-- [Defining Schematron Quick Fixes](https://www.oxygenxml.com/doc/ug-editor/topics/customizing-sqf.html)
-- [Basic Schematron Quick Fix Operations](https://www.oxygenxml.com/doc/ug-editor/topics/sqf-operations.html)
-- [User Entry SQF Operation](https://www.oxygenxml.com/doc/ug-editor/topics/user-entry-sqf-operation.html)
-- [Restricting Quick Fix Operations](https://www.oxygenxml.com/doc/ug-editor/topics/use-when-sqf-condition.html)
-- [Formatting/Indenting Content Inserted by SQF Operations](https://www.oxygenxml.com/doc/ug-editor/topics/format-indent-sqf-content.html)
+- [Defining Schematron Quick Fixes](https://www.oxygenxml.com/doc/ug-editor/topics/customizing-sqf.md)
+- [Basic Schematron Quick Fix Operations](https://www.oxygenxml.com/doc/ug-editor/topics/sqf-operations.md)
+- [User Entry SQF Operation](https://www.oxygenxml.com/doc/ug-editor/topics/user-entry-sqf-operation.md)
+- [Restricting Quick Fix Operations](https://www.oxygenxml.com/doc/ug-editor/topics/use-when-sqf-condition.md)
+- [Formatting/Indenting Content Inserted by SQF Operations](https://www.oxygenxml.com/doc/ug-editor/topics/format-indent-sqf-content.md)
 - [SQF Specification (April 2015 Draft)](http://schematron-quickfix.github.io/sqf/publishing-snapshots/April2015Draft/spec/SQFSpec.html)
 
 Required namespace on the schema root, plus `queryBinding="xslt2"` (SQF needs XPath 2.0+):

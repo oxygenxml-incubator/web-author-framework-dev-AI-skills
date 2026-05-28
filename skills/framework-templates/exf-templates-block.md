@@ -2,7 +2,7 @@
 
 How templates are wired into a Web Author framework via a user-uploaded `.exf`. Covers only templates-specific concerns — for the rest of the `.exf` shape, see `exf-structure.md` in the `ai-framework-developer` skill.
 
-Full reference: <https://www.oxygenxml.com/doc/ug-editor/topics/framework-customization-script-usecases.html> (canonical `.exf` element reference, including `<documentTemplates>` / `<addEntry>` / `inherit`).
+Full reference: <https://www.oxygenxml.com/doc/ug-editor/topics/framework-customization-script-usecases.md> (canonical `.exf` element reference, including `<documentTemplates>` / `<addEntry>` / `inherit`).
 
 ## Registration
 
@@ -57,7 +57,7 @@ Drop `base=` on `<script>` and add `<associationRules>` (see `association-rules.
 | `${framework}` | URL form (`file:/D:/.../user-frameworks/<ext>`) | **No.** The templates loader doesn't strip the `file:` prefix, so on Windows the SecurityManager rejects the path. (Fine for `<addCss>` — that loader strips it correctly.) See `troubleshooting.md`. |
 | Absolute path | Literal filesystem path | **Never.** Breaks when the kit moves or another machine deploys the extension. |
 
-Both placeholders point at the same directory — the `.exf`'s own framework directory. Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.html>.
+Both placeholders point at the same directory — the `.exf`'s own framework directory. Reference: <https://www.oxygenxml.com/doc/ug-editor/topics/editor-variables.md>.
 
 Same form on Linux, macOS, and Windows; same form for `mode=extend` and `mode=new`.
 

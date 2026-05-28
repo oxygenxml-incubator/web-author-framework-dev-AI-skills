@@ -113,8 +113,8 @@ If the subset above is not enough, also check these operation names from the sam
 
 For full argument details, verify in:
 
-- `https://www.oxygenxml.com/doc/ug-editor/topics/dg-default-author-operations.html`
-- `https://www.oxygenxml.com/doc/ug-editor/topics/dg-create-custom-actions.html`
+- `https://www.oxygenxml.com/doc/ug-editor/topics/dg-default-author-operations.md`
+- `https://www.oxygenxml.com/doc/ug-editor/topics/dg-create-custom-actions.md`
 - The operation chooser in Oxygen (`Document Type Association` -> `Author` -> `Actions` -> `Operation` -> `Choose`), which shows arguments for the selected operation.
 - API docs (`AuthorOperation`) and `getArguments()` for exact runtime argument metadata.
 

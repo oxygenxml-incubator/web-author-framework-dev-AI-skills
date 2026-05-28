@@ -4,11 +4,11 @@ How to ship a Schematron Quick Fix as part of an oXygen framework so authors see
 
 Full references (read via `oxygen-docs`):
 
-- [Integrating SQF in a Framework and Sharing Them](https://www.oxygenxml.com/doc/ug-editor/topics/sqf-implementing-framework.html) — canonical end-to-end recipe (Desktop dialog flow).
-- [Validating Schematron Quick Fixes](https://www.oxygenxml.com/doc/ug-editor/topics/validating-sqf.html)
-- [Configuring Validation Scenarios for a Framework](https://www.oxygenxml.com/doc/ug-editor/topics/dg-validation-scenarios.html)
-- [Associating a Schema in Validation Scenarios](https://www.oxygenxml.com/doc/ug-editor/topics/associate-schema-framework-validation.html)
-- [Sharing a Framework](https://www.oxygenxml.com/doc/ug-editor/topics/author-document-type-extension-sharing.html)
+- [Integrating SQF in a Framework and Sharing Them](https://www.oxygenxml.com/doc/ug-editor/topics/sqf-implementing-framework.md) — canonical end-to-end recipe (Desktop dialog flow).
+- [Validating Schematron Quick Fixes](https://www.oxygenxml.com/doc/ug-editor/topics/validating-sqf.md)
+- [Configuring Validation Scenarios for a Framework](https://www.oxygenxml.com/doc/ug-editor/topics/dg-validation-scenarios.md)
+- [Associating a Schema in Validation Scenarios](https://www.oxygenxml.com/doc/ug-editor/topics/associate-schema-framework-validation.md)
+- [Sharing a Framework](https://www.oxygenxml.com/doc/ug-editor/topics/author-document-type-extension-sharing.md)
 
 Related local refs: `ai-framework-developer` → `exf-structure.md` (`.exf` shape) and `validation-scenarios-export.md` (`.scenarios` format).
 
@@ -23,7 +23,7 @@ In practice **Route A** for SQF extensions over an existing framework, **Route B
 
 ## Schema-detection order (why a fix sometimes doesn't fire)
 
-Per [Associating a Schema to XML Documents](https://www.oxygenxml.com/doc/ug-editor/topics/associate-schema-to-document.html), oXygen picks the schema(s) for validation in this order:
+Per [Associating a Schema to XML Documents](https://www.oxygenxml.com/doc/ug-editor/topics/associate-schema-to-document.md), oXygen picks the schema(s) for validation in this order:
 
 1. Validation scenario **associated with the current document** (per-document attachment).
 2. Validation scenario **specified as default** in the framework (document-type config).
@@ -223,10 +223,10 @@ For a standalone framework whose primary schema **is** the `.sch`:
 
 ## Sharing the extension
 
-Once verified, `user-frameworks/<dir>/` is what gets shared. Options per [Sharing a Framework](https://www.oxygenxml.com/doc/ug-editor/topics/author-document-type-extension-sharing.html):
+Once verified, `user-frameworks/<dir>/` is what gets shared. Options per [Sharing a Framework](https://www.oxygenxml.com/doc/ug-editor/topics/author-document-type-extension-sharing.md):
 
 - **Zip and distribute** — recipients drop the folder into their own `user-frameworks/`.
-- **Promote to an add-on** — package per [Packing and Deploying Add-ons](https://www.oxygenxml.com/doc/ug-editor/topics/packing-and-deploying-addons.html).
+- **Promote to an add-on** — package per [Packing and Deploying Add-ons](https://www.oxygenxml.com/doc/ug-editor/topics/packing-and-deploying-addons.md).
 - **Promote to a built-in framework** — copy into `frameworks/` (curated kits only).
 
 In all cases the `.sch` travels with the framework directory, so SQF availability stays consistent across machines.
