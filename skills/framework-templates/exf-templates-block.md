@@ -73,4 +73,6 @@ If the user already has an extension for the target base framework, **add the ne
 
 ## Restart and verify
 
-`user-frameworks/` is scanned only at kit startup — full stop + start required. See `ai-framework-developer` for the exact restart sequence and its `web-author-logs.md` reference for the `Loading user uploaded frameworks from:` log signal. After restart, jump to `troubleshooting.md` for the verification flow.
+`user-frameworks/` is scanned only at kit startup — a full stop + start is required whenever the `.exf` changes, including adding/removing a `<documentTemplates>` block (registering/unregistering a template). See `ai-framework-developer` for the exact restart sequence and its `web-author-logs.md` reference for the `Loading user uploaded frameworks from:` log signal. After restart, jump to `troubleshooting.md` for the verification flow.
+
+A **content-only** edit to an already-registered template file is the exception — it does **not** need a restart; the updated content is read the next time the template is instantiated via the New File wizard. See the "Not every change needs a restart" rule in `ai-framework-developer`.

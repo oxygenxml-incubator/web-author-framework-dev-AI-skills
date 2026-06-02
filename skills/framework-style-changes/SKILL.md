@@ -35,7 +35,7 @@ Use this skill for Author-mode CSS changes in Web Author.
 2. Read `oxy-css-reference.md` before introducing any `oxy_*` / `-oxy-*` construct. For Web Author specifically, also scan `web-author-css-limitations.md` so you don't ship a selector or property that's silently dropped in WA.
 3. Keep all edits in user extension paths under `USER_FRAMEWORKS_DIR`; never touch `BUNDLED_FRAMEWORKS_DIR`.
 4. Place the test document per the rules above before browser verification.
-5. Restart the kit per the `ai-framework-developer` rules (full stop+start; verify the port stops responding before starting again — a half-stopped Tomcat will silently no-op the next start).
+5. Pick up the change. A **content-only** edit to an already-referenced CSS file does **not** need a restart — hard-reload the Author page with **cache disabled** (Chrome DevTools → Disable cache) so the browser doesn't serve stale CSS; for fast iteration, reload instead of restarting each time. A full restart per the `ai-framework-developer` rules (full stop+start; verify the port stops responding before starting again — a half-stopped Tomcat will silently no-op the next start) is required only when the `.exf` itself changes, e.g. adding/removing an `<addCss>` *reference*. See the "Not every change needs a restart" rule in `ai-framework-developer`.
 6. Verify in browser:
    - (a) The custom CSS is loaded (look for the `<addCss>` `path` in the page source / network tab).
    - (b) The expected rules win precedence (use the Author CSS inspector reasoning: bundled `!important` rules in `frameworks/<base>/css/core/` and `actions/actions.css` often need matching `!important` in your override).

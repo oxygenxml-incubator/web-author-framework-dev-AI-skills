@@ -23,5 +23,5 @@ To restart a Web Author kit:
 3. Launch the kit's start script **detached** — do not call it inline. The vendor `start oXygen XML Web Author.bat` ends with `pause` and will hang the caller. On Windows, wrap it in `Start-Process cmd.exe /c "<start.bat>"` (or equivalent) so the trailing pause stays inside the spawned window.
 4. Poll the same probe URL until it answers `200/302/401`.
 
-Always do a full stop + start when changing anything under `user-frameworks/` — that folder is scanned at startup only.
+Not every change needs a restart. A full stop + start is **always** required when changing the `.exf` itself or the `user-frameworks/` structure/config — adding/removing CSS or template references, registering/unregistering templates, etc. (that tree is scanned at startup only). But a **content-only** edit to an already-referenced CSS or template file does **not** need a restart: Web Author re-reads the file from disk on document reopen / page refresh. Because the browser caches CSS, hard-reload the page with cache disabled (Chrome DevTools → Disable cache) to pick up the new content. For fast CSS iteration, reload instead of restarting each time. When a change's effect can't be observed directly, a full restart + checking the logs is the fastest, most reliable way to confirm it took effect.
 

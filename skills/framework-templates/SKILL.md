@@ -1,6 +1,6 @@
 ---
 name: framework-templates
-description: Use when adding, registering, or customizing document/file templates, OR when answering questions about template behavior — editor variables, expansion rules, properties files, the New File wizard — in oXygen Web Author or desktop. Also packages templates as a user-framework `.exf` extension and verifies they appear after a kit restart.
+description: Use when adding, registering, or customizing document/file templates, OR when answering questions about template behavior — editor variables, expansion rules, properties files, the New File wizard — in oXygen Web Author or desktop. Also packages templates as a user-framework `.exf` extension and verifies they appear after a kit restart (a restart is needed when registering templates in the `.exf`, but not for content-only edits to an already-registered template file).
 ---
 
 # Framework Templates
@@ -27,7 +27,7 @@ Adding **document templates** to a Web Author framework. Templates appear in the
 3. **Ground every seed in the actual DTD / XSD / RNG of the target framework. Never write seed content from memory of the vocabulary.** Open the schema (e.g. `<BUNDLED_FRAMEWORKS_DIR>/dita/dtd/technicalContent/dtd/task.dtd`, or whatever the doctype declares) and confirm element names, allowed children, and required ordering before emitting. Cross-check against a bundled template as a second source. Applies to DITA, DocBook, TEI, or anything else — guessing produces validation errors the user has to report back.
 4. Keep all edits under `USER_FRAMEWORKS_DIR/<session>/`. Never write into `BUNDLED_FRAMEWORKS_DIR/`.
 5. **Confirming a seed is correct = two steps, and nothing else.** (a) **You** ground every element / attribute / ordering in the actual DTD / XSD / RNG while writing it (step 3) — that is the only correctness work you can do. (b) **The user** runs the live validation: confirming the content validates means *creating a file* from the template, which you can't do — file creation in Web Author needs a writable storage connector (Git / WebDAV / …) that only the user configures. So instruct the user to set up a connector, create a file from the template via the New File wizard, and manually confirm it opens with no validation errors and all `${...}` resolved (see `troubleshooting.md`). **There is no offline / command-line schema validator in scope. Never write or run a standalone program — Java/SAX, Python, Node, an `xmllint`-style tool, anything — and never fabricate a variable-substituted copy of the seed to feed one.** No `xmllint` on the box is expected, not a gap to fill.
-6. Restart the kit fully (stop + start). `user-frameworks/` is scanned only at startup.
+6. Restart the kit fully (stop + start) when **registering/removing** templates in the `.exf` — `user-frameworks/` is scanned only at startup. A **content-only** edit to an already-registered template file does **not** need a restart: its updated content is read the next time you instantiate it via the New File wizard. See the "Not every change needs a restart" rule in `ai-framework-developer`.
 7. Verify in the browser via the wizard or `template-chooser.html`. If the template doesn't appear, go to `troubleshooting.md` before guessing.
 8. If two iterations produce no progress, switch to `oxygen-docs` (start from the topics in `doc-references.md`).
 
