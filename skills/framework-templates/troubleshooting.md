@@ -14,6 +14,14 @@ How to verify a templates extension loaded correctly, and what to check when it 
 
 **Quick check without driving the wizard** — open `http://localhost:<PORT>/oxygen-xml-web-author/app/template-chooser.html`. It renders the merged tree the dashboard's New File flow uses, including all categories from user-uploaded frameworks. Grep `document.body.innerText` for your category / template names. Prefer this over the REST endpoint — the chooser works with the existing browser session, while `/rest/<ver>/actions/templates` is auth-gated and CSRF-filtered.
 
+## Confirming the seed content actually validates (user-driven — you can't do this yourself)
+
+The checks above confirm a template *appears* with the right label and category. They do **not** confirm the seed produces a valid document — and there is no way for you to confirm that, because **creating a file from a template requires a writable storage connector** (Git, WebDAV, …) that only the user can configure. The bundled `samples://` connector and the read-only browsing flows above can't create new files, so the content check is the user's to run. Hand it over explicitly:
+
+> Ask the user to: configure a storage connector (Git / WebDAV / S3 / …) in Web Author, create a new file from the template via the New File wizard, and confirm it opens with **no validation errors**, every `${...}` variable resolved, and `<?oxy-placeholder?>` hints rendered. Ask them to paste back anything the validator flags.
+
+Do not try to stand in for this with an offline validator or a hand-expanded copy of the seed — see `SKILL.md` Required-flow step 5. Your grounding in the DTD/XSD/RNG (step 3) is the only correctness work you can do before the user reports back.
+
 ## If a template doesn't appear
 
 Diagnose top-down.
@@ -73,7 +81,9 @@ But cases (1) "wrong path" and (2) "parallel extensions" produce *nothing* in th
 
 ## If the wizard shows the template but creating a file fails
 
-- Seed `.dita` is malformed — open it directly in WA first; fix XML errors before re-testing the wizard path.
+(The user hits these when they create a file via their connector — you can't reach this path yourself. Diagnose from what they report.)
+
+- Seed `.dita` is malformed — have the user open the created file in WA and fix the XML errors it reports before re-testing. You re-check your grounding against the DTD/XSD/RNG in parallel.
 - Placeholder typos like `$ {id}` or `${Id}` won't be expanded — they appear literally in the saved file.
 - `<?oxy-placeholder?>` PI in an element that contains other content or whitespace — the PI won't render. Strip whitespace inside the element.
 
