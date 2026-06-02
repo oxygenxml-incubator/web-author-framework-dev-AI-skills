@@ -6,7 +6,23 @@ If you author or maintain Web Author frameworks these skills aim to make the wor
 
 The skills come with built-in knowledge of Web Author's framework model, CSS extensions, Guided Authoring, content completion, validation scenarios, and Schematron Quick Fixes. Optionally, with Chrome DevTools MCP installed, the agent can also load Web Author in a browser and verify that the changes work as intended.
 
-> ⚠️ Note: Please read the [Disclaimer](#disclaimer) section before using it on anything you care about.
+## Important Safety Notice
+
+⚠️ **Please read the [Disclaimer](#disclaimer) section before using it on anything you care about.**
+
+⚠️ **The agent can modify your Web Author kit, so make sure you use it in a test environment.**
+
+Before accepting changes:
+
+- Review all proposed modifications carefully
+- Keep a backup of your Web Author kit
+- Prefer working from a copy of the kit during experimentation or development
+
+When installed at the kit root, the agent can read and modify files across the entire Web Author installation, including your existing `user-frameworks/`, built-in frameworks, configuration files, and other internal Web Author resources.
+
+The skills are intended to create and modify **user extensions inside `user-frameworks/`**. However, because the agent has filesystem access to the full kit, incorrect instructions or unintended edits may still affect bundled frameworks or internal files.
+
+These precautions help keep framework development safe and reversible.
 
 ## Prerequisites
 
@@ -112,22 +128,6 @@ A typical development workflow looks like this:
 We recommend using a Git repository for the framework. This makes it easy to inspect diffs, revert unwanted changes, and iterate safely as the agent modifies files. Maintaining a `README.md` inside the framework also helps preserve project context across multiple Claude Code sessions — the agent can read it at the start of a new chat instead of re-deriving the framework's structure from scratch, which reduces token usage and keeps development consistent across sessions.
  
 This workflow supports rapid iteration while keeping framework customization transparent and reviewable.
-
-## Important Safety Notice
-
-⚠️ **The agent can modify your Web Author kit.**
-
-Before accepting changes:
-
-- Review all proposed modifications carefully
-- Keep a backup of your Web Author kit
-- Prefer working from a copy of the kit during experimentation or development
-
-When installed at the kit root, the agent can read and modify files across the entire Web Author installation, including your existing `user-frameworks/`, built-in frameworks, configuration files, and other internal Web Author resources.
-
-The skills are intended to create and modify **user extensions inside `user-frameworks/`**. However, because the agent has filesystem access to the full kit, incorrect instructions or unintended edits may still affect bundled frameworks or internal files.
-
-These precautions help keep framework development safe and reversible.
 
 ## License
 
