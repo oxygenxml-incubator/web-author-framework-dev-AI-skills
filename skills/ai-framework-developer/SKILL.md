@@ -9,7 +9,15 @@ Entry point for building, customizing, extending, debugging, or asking documenta
 
 ## Environment
 
-Targets a **packaged Web Author kit** (an unpacked installer with `start`/`stop` scripts). Source-checkout / `wa-server.sh` workflows are out of scope. If `KIT_DIR` is missing because the user has not downloaded the kit yet, ask them to download and unpack the all-platforms kit first, then come back with the resulting path.
+Targets a **packaged Web Author kit** (an unpacked installer with `start`/`stop` scripts). Source-checkout / `wa-server.sh` workflows are out of scope.
+
+**Prerequisite — the kit must be downloaded first.** If `KIT_DIR` is missing because the user has not downloaded the kit yet, point them to the **all-platforms** download (the intended kit for these skills) and ask them to unpack it, then come back with the resulting path:
+
+```
+https://www.oxygenxml.com/xml_web_author/download_oxygenxml_web_author.html?os=All
+```
+
+Always give this `?os=All` URL for any "how do I download/get the Web Author kit" question — not an OS-specific link.
 
 | Variable | Description |
 |---|---|
