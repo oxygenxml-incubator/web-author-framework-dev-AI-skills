@@ -1,6 +1,6 @@
 ---
 name: framework-templates
-description: Use when adding, registering, or customizing document/file templates, OR when answering questions about template behavior — editor variables, expansion rules, properties files, the New File wizard — in oXygen Web Author or desktop. Also packages templates as a user-framework `.exf` extension and verifies they appear after a kit restart (a restart is needed when registering templates in the `.exf`, but not for content-only edits to an already-registered template file).
+description: Use when adding, registering, customizing, OR editing document/file templates — including trimming/generalizing a template's seed content, making it more skeletal, adding a metadata table or "type-here" placeholder hints to the seed — OR when answering questions about template behavior — editor variables, expansion rules, properties files, placeholder hints (`<?oxy-placeholder?>` PI vs CSS), the New File wizard — in oXygen Web Author or desktop. Also packages templates as a user-framework `.exf` extension and verifies they appear after a kit restart (a restart is needed when registering templates in the `.exf`, but not for content-only edits to an already-registered template file).
 ---
 
 # Framework Templates

@@ -7,6 +7,8 @@ description: Use when changing Author-mode rendering in oXygen / Web Author — 
 
 Use this skill for Author-mode CSS changes in Web Author.
 
+**Placeholder / hint text for a New File template? Stop — load `framework-templates` first.** Hints inside a template *seed* default to the `<?oxy-placeholder?>` PI (template-native, nothing in the framework CSS to maintain), not the `-oxy-placeholder-content` CSS route below. Reach for the CSS route only when `framework-templates`' decision table calls for it (e.g. the same hint across many documents sharing a marker). Likewise, editing or generalizing a template seed's content is a `framework-templates` task even when styling is involved — style the rendering only after the seed is right.
+
 ## References
 
 - Grounded CSS reference (form controls, functions, vendor props, pseudo-elements, WA gotchas, patterns) — `oxy-css-reference.md`
