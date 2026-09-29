@@ -1,0 +1,107 @@
+Package [ro.sync.ecss.extensions.dita.map.table](package-summary.md)
+
+# Class RelTableShowPropertiesOperation
+
+* [java.lang.Object](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html)
+    * [ro.sync.ecss.extensions.commons.table.properties.ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md)
+        * ro.sync.ecss.extensions.dita.map.table.RelTableShowPropertiesOperation
+   All Implemented Interfaces: [AuthorOperation](../../../api/AuthorOperation.md), [Extension](../../../api/Extension.md)   @API(type=INTERNAL, src=PUBLIC) public class RelTableShowPropertiesOperation extends [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md)
+"Show table properties" operation for DITA Map rel table.
+
+## Field Summary
+
+### Fields inherited from class ro.sync.ecss.extensions.commons.table.properties.[ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md)
+ [authorAccess](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#authorAccess), [tableHelper](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#tableHelper)
+### Fields inherited from interface ro.sync.ecss.extensions.api.[AuthorOperation](../../../api/AuthorOperation.md)
+ [NAMESPACE_ARGUMENT](../../../api/AuthorOperation.md#NAMESPACE_ARGUMENT), [NAMESPACE_ARGUMENT_DESCRIPTOR](../../../api/AuthorOperation.md#NAMESPACE_ARGUMENT_DESCRIPTOR), [SCHEMA_AWARE_ARGUMENT](../../../api/AuthorOperation.md#SCHEMA_AWARE_ARGUMENT), [SCHEMA_AWARE_ARGUMENT_DESCRIPTOR](../../../api/AuthorOperation.md#SCHEMA_AWARE_ARGUMENT_DESCRIPTOR)
+## Constructor Summary
+ Constructors
+Constructor
+
+Description
+ [RelTableShowPropertiesOperation](#%3Cinit%3E())()
+Constructor.
+
+## Method Summary
+  All MethodsInstance MethodsConcrete Methods
+Modifier and Type
+
+Method
+
+Description
+ protected boolean [computeFragmentMoveInsideHeader](#computeFragmentMoveInsideHeader(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))([List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorDocumentFragment](../../../api/node/AuthorDocumentFragment.md)> fragments, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[Position](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/text/Position.html)> offsets, [TabInfo](../../../commons/table/properties/TabInfo.md) tabInfo, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorElement](../../../api/node/AuthorElement.md)> nodesToModify, [AuthorElement](../../../api/node/AuthorElement.md) currentNode)
+Computes the fragment and position, inside header element, for the given node.
+  protected boolean [computeFragmentsToMoveInsideBody](#computeFragmentsToMoveInsideBody(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))([List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorDocumentFragment](../../../api/node/AuthorDocumentFragment.md)> fragments, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[Position](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/text/Position.html)> offsets, [TabInfo](../../../commons/table/properties/TabInfo.md) tabInfo, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorElement](../../../api/node/AuthorElement.md)> nodesToModify, [AuthorElement](../../../api/node/AuthorElement.md) currentNode)
+Computes the fragment and position, inside body element, for the given node.
+  protected boolean [computeFragmentsToMoveInsideFooter](#computeFragmentsToMoveInsideFooter(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))([List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorDocumentFragment](../../../api/node/AuthorDocumentFragment.md)> fragments, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[Position](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/text/Position.html)> offsets, [TabInfo](../../../commons/table/properties/TabInfo.md) tabInfo, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorElement](../../../api/node/AuthorElement.md)> nodesToModify, [AuthorElement](../../../api/node/AuthorElement.md) currentNode)
+Computes the fragment and position, inside footer element, for the given node.
+  protected [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[TabInfo](../../../commons/table/properties/TabInfo.md)> [getCategoriesAndProperties](#getCategoriesAndProperties(java.util.List))([List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[Integer](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html)[]> selections)
+Obtain the categories from the table properties dialog.
+  protected [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html) [getHelpPageID](#getHelpPageID())()
+Get the ID of the help page which will be called by the end user.
+  protected [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[TableProperty](../../../commons/table/properties/TableProperty.md)> [getTableAttribute](#getTableAttribute())()
+Obtain the table attributes.
+
+### Methods inherited from class ro.sync.ecss.extensions.commons.table.properties.[ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md)
+ [checkRowSpans](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#checkRowSpans(java.util.List,int)), [doOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#doOperation(ro.sync.ecss.extensions.api.AuthorAccess,ro.sync.ecss.extensions.api.ArgumentsMap)), [getArguments](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getArguments()), [getAttrProperty](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getAttrProperty(java.util.List,java.lang.String,ro.sync.ecss.extensions.commons.table.properties.TableProperty)), [getCommonValue](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getCommonValue(ro.sync.ecss.extensions.api.node.AuthorElement,java.lang.String,java.lang.String)), [getDescription](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getDescription()), [getElementsWithModifiedAttributes](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getElementsWithModifiedAttributes(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo)), [getFragmentsAndOffsetsToInsert](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getFragmentsAndOffsetsToInsert(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo)), [getSelectedTab](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getSelectedTab(java.util.List)), [getTableInformation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getTableInformation(java.util.List)), [showTableProperties](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#showTableProperties(ro.sync.ecss.extensions.api.ArgumentsMap))
+### Methods inherited from class java.lang.[Object](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html)
+ [clone](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()), [equals](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)), [finalize](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()), [getClass](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()), [hashCode](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()), [notify](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()), [notifyAll](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()), [toString](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()), [wait](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()), [wait](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)), [wait](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int))
+## Constructor Details
+
+### RelTableShowPropertiesOperation
+
+public RelTableShowPropertiesOperation()
+
+Constructor.
+
+## Method Details
+
+### getCategoriesAndProperties
+
+protected [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[TabInfo](../../../commons/table/properties/TabInfo.md)> getCategoriesAndProperties([List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[Integer](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html)[]> selections)
+ Description copied from class: [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getCategoriesAndProperties(java.util.List))
+Obtain the categories from the table properties dialog. The categories maps the tab name to the list of properties that will be modified in the corresponding tab panel. Every property will be modified using a combobox/radios which will contain the possible values for that property. The label string for the combobox/radios group will be the provided render string of the property or the property name, if a render string is not provided.
+  Specified by: [getCategoriesAndProperties](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getCategoriesAndProperties(java.util.List)) in class [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md) Parameters: selections - The currently selected nodes or the node at caret position. Returns: A list of tab info objects containing the tab names and the corresponding properties list. See Also:
+        * [ShowTablePropertiesBaseOperation.getCategoriesAndProperties(java.util.List)](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getCategoriesAndProperties(java.util.List))
+
+### computeFragmentsToMoveInsideFooter
+
+protected boolean computeFragmentsToMoveInsideFooter([List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorDocumentFragment](../../../api/node/AuthorDocumentFragment.md)> fragments, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[Position](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/text/Position.html)> offsets, [TabInfo](../../../commons/table/properties/TabInfo.md) tabInfo, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorElement](../../../api/node/AuthorElement.md)> nodesToModify, [AuthorElement](../../../api/node/AuthorElement.md) currentNode)throws [AuthorOperationException](../../../api/AuthorOperationException.md)
+ Description copied from class: [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentsToMoveInsideFooter(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))
+Computes the fragment and position, inside footer element, for the given node.
+  Specified by: [computeFragmentsToMoveInsideFooter](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentsToMoveInsideFooter(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement)) in class [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md) Parameters: fragments - A list with already computed fragments. The new fragment will be added to this list. offsets - A list with positions where the given fragments will be inserted. tabInfo - The current edited tab info. nodesToModify - A list containing all the nodes that will be deleted. currentNode - The node to be checked if it should be moved. Returns: true if the parent of the given node parent should be also deleted. Throws: [AuthorOperationException](../../../api/AuthorOperationException.md) - If the new parent fragment could not be inserted. See Also:
+        * [ShowTablePropertiesBaseOperation.computeFragmentsToMoveInsideFooter(java.util.List, java.util.List, ro.sync.ecss.extensions.commons.table.properties.TabInfo, java.util.List, ro.sync.ecss.extensions.api.node.AuthorElement)](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentsToMoveInsideFooter(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))
+
+### computeFragmentMoveInsideHeader
+
+protected boolean computeFragmentMoveInsideHeader([List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorDocumentFragment](../../../api/node/AuthorDocumentFragment.md)> fragments, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[Position](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/text/Position.html)> offsets, [TabInfo](../../../commons/table/properties/TabInfo.md) tabInfo, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorElement](../../../api/node/AuthorElement.md)> nodesToModify, [AuthorElement](../../../api/node/AuthorElement.md) currentNode)throws [AuthorOperationException](../../../api/AuthorOperationException.md)
+ Description copied from class: [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentMoveInsideHeader(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))
+Computes the fragment and position, inside header element, for the given node.
+  Specified by: [computeFragmentMoveInsideHeader](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentMoveInsideHeader(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement)) in class [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md) Parameters: fragments - A list with already computed fragments. The new fragment will be added to this list. offsets - A list with positions where the given fragments will be inserted. tabInfo - The current edited tab info. nodesToModify - A list containing all the nodes that will be deleted. currentNode - The node to be checked if it should be moved. Returns: true if the parent of the given node parent should be also deleted. Throws: [AuthorOperationException](../../../api/AuthorOperationException.md) - If the new parent fragment could not be inserted. See Also:
+        * [ShowTablePropertiesBaseOperation.computeFragmentMoveInsideHeader(java.util.List, java.util.List, ro.sync.ecss.extensions.commons.table.properties.TabInfo, java.util.List, ro.sync.ecss.extensions.api.node.AuthorElement)](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentMoveInsideHeader(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))
+
+### computeFragmentsToMoveInsideBody
+
+protected boolean computeFragmentsToMoveInsideBody([List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorDocumentFragment](../../../api/node/AuthorDocumentFragment.md)> fragments, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[Position](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/text/Position.html)> offsets, [TabInfo](../../../commons/table/properties/TabInfo.md) tabInfo, [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[AuthorElement](../../../api/node/AuthorElement.md)> nodesToModify, [AuthorElement](../../../api/node/AuthorElement.md) currentNode)throws [AuthorOperationException](../../../api/AuthorOperationException.md)
+ Description copied from class: [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentsToMoveInsideBody(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))
+Computes the fragment and position, inside body element, for the given node.
+  Specified by: [computeFragmentsToMoveInsideBody](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentsToMoveInsideBody(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement)) in class [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md) Parameters: fragments - A list with already computed fragments. The new fragment will be added to this list. offsets - A list with positions where the given fragments will be inserted. tabInfo - The current edited tab info. nodesToModify - A list containing all the nodes that will be deleted. currentNode - The node to be checked if it should be moved. Returns: true if the parent of the given node parent should be also deleted. Throws: [AuthorOperationException](../../../api/AuthorOperationException.md) - If the new parent fragment could not be inserted. See Also:
+        * [ShowTablePropertiesBaseOperation.computeFragmentsToMoveInsideBody(java.util.List, java.util.List, ro.sync.ecss.extensions.commons.table.properties.TabInfo, java.util.List, ro.sync.ecss.extensions.api.node.AuthorElement)](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#computeFragmentsToMoveInsideBody(java.util.List,java.util.List,ro.sync.ecss.extensions.commons.table.properties.TabInfo,java.util.List,ro.sync.ecss.extensions.api.node.AuthorElement))
+
+### getTableAttribute
+
+protected [List](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)<[TableProperty](../../../commons/table/properties/TableProperty.md)> getTableAttribute()
+ Description copied from class: [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getTableAttribute())
+Obtain the table attributes.
+  Specified by: [getTableAttribute](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getTableAttribute()) in class [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md) Returns: A list with [TableProperty](../../../commons/table/properties/TableProperty.md) objects containing the table attributes qualified name, render string and possible values. See Also:
+        * [ShowTablePropertiesBaseOperation.getTableAttribute()](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getTableAttribute())
+
+### getHelpPageID
+
+protected [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html) getHelpPageID()
+ Description copied from class: [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getHelpPageID())
+Get the ID of the help page which will be called by the end user.
+  Overrides: [getHelpPageID](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getHelpPageID()) in class [ShowTablePropertiesBaseOperation](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md) Returns: the ID of the help page which will be called by the end user or null. See Also:
+        * [ShowTablePropertiesBaseOperation.getHelpPageID()](../../../commons/table/properties/ShowTablePropertiesBaseOperation.md#getHelpPageID())
+
+© Copyright [Syncro Soft SRL](http://www.sync.ro) 2002 - 2026. All rights reserved.

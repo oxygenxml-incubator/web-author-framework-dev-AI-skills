@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Oxygen XML Web Author Interface: Comment</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.dark.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.readable.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Oxygen XML Web Author</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="sync.html">sync</a></li><li><a href="sync.actions.html">sync.actions</a></li><li><a href="sync.actions.findreplace.html">sync.actions.findreplace</a></li><li><a href="sync.api.html">sync.api</a></li><li><a href="sync.api.change_tracking.html">sync.api.change_tracking</a></li><li><a href="sync.api.dom.html">sync.api.dom</a></li><li><a href="sync.api.math.html">sync.api.math</a></li><li><a href="sync.api.Translation.html">sync.api.Translation</a></li><li><a href="sync.ext.html">sync.ext</a></li><li><a href="sync.formctrls.html">sync.formctrls</a></li><li><a href="sync.options.html">sync.options</a></li><li><a href="sync.view.html">sync.view</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="goog.Disposable.html">goog.Disposable</a></li><li><a href="goog.events.Event.html">goog.events.Event</a></li><li><a href="goog.events.EventTarget.html">goog.events.EventTarget</a></li><li><a href="HighlightsManager.html">HighlightsManager</a></li><li><a href="module.exports.html">module.exports</a></li><li><a href="sync.actions.AbstractAction.html">sync.actions.AbstractAction</a></li><li><a href="sync.actions.AttributeEditingAction.html">sync.actions.AttributeEditingAction</a></li><li><a href="sync.actions.AttributeEditingActionsProvider.html">sync.actions.AttributeEditingActionsProvider</a></li><li><a href="sync.actions.DropAction.html">sync.actions.DropAction</a></li><li><a href="sync.actions.OpenAction.html">sync.actions.OpenAction</a></li><li><a href="sync.api.ActionsManager.html">sync.api.ActionsManager</a></li><li><a href="sync.api.ActionsManagerCore.html">sync.api.ActionsManagerCore</a></li><li><a href="sync.api.AuthorEditingSupport.AuthorModelChangedEvent.html">sync.api.AuthorEditingSupport.AuthorModelChangedEvent</a></li><li><a href="sync.api.AuthorEditingSupport.ModelChangedMutation.html">sync.api.AuthorEditingSupport.ModelChangedMutation</a></li><li><a href="sync.api.AuthorWidgetsFactory.html">sync.api.AuthorWidgetsFactory</a></li><li><a href="sync.api.ChangeTrackingManager.html">sync.api.ChangeTrackingManager</a></li><li><a href="sync.api.ConcurrentEditingManager.html">sync.api.ConcurrentEditingManager</a></li><li><a href="sync.api.CreateDocumentAction.html">sync.api.CreateDocumentAction</a></li><li><a href="sync.api.Dialog.html">sync.api.Dialog</a></li><li><a href="sync.api.Dialog.SizeChangedEvent.html">sync.api.Dialog.SizeChangedEvent</a></li><li><a href="sync.api.EditImageMapAction.html">sync.api.EditImageMapAction</a></li><li><a href="sync.api.EditingContextManager.html">sync.api.EditingContextManager</a></li><li><a href="sync.api.EditingSupport.html">sync.api.EditingSupport</a></li><li><a href="sync.api.EditingSupport.DirtyStatusChangedEvent.html">sync.api.EditingSupport.DirtyStatusChangedEvent</a></li><li><a href="sync.api.EditingSupportManager.html">sync.api.EditingSupportManager</a></li><li><a href="sync.api.Editor.html">sync.api.Editor</a></li><li><a href="sync.api.Editor.ActionsLoadedEvent.html">sync.api.Editor.ActionsLoadedEvent</a></li><li><a href="sync.api.Editor.DirtyStatusChangedEvent.html">sync.api.Editor.DirtyStatusChangedEvent</a></li><li><a href="sync.api.Editor.LinkOpenedEvent.html">sync.api.Editor.LinkOpenedEvent</a></li><li><a href="sync.api.Editor.WebappMessageReceived.html">sync.api.Editor.WebappMessageReceived</a></li><li><a href="sync.api.FileBrowsingDialog.html">sync.api.FileBrowsingDialog</a></li><li><a href="sync.api.FileBrowsingDialog.FolderEntryDescriptor.html">sync.api.FileBrowsingDialog.FolderEntryDescriptor</a></li><li><a href="sync.api.FileBrowsingDialog.UserActionRequiredEvent.html">sync.api.FileBrowsingDialog.UserActionRequiredEvent</a></li><li><a href="sync.api.FileServersManager.html">sync.api.FileServersManager</a></li><li><a href="sync.api.HighlightUpdateEvent.html">sync.api.HighlightUpdateEvent</a></li><li><a href="sync.api.NotificationsManager.html">sync.api.NotificationsManager</a></li><li><a href="sync.api.PersistentHighlightsManager.html">sync.api.PersistentHighlightsManager</a></li><li><a href="sync.api.PersistentHighlightUpdateEvent.html">sync.api.PersistentHighlightUpdateEvent</a></li><li><a href="sync.api.PositionInformation.html">sync.api.PositionInformation</a></li><li><a href="sync.api.Selection.html">sync.api.Selection</a></li><li><a href="sync.api.SelectionCore.html">sync.api.SelectionCore</a></li><li><a href="sync.api.SelectionManager.html">sync.api.SelectionManager</a></li><li><a href="sync.api.SelectionManagerCore.html">sync.api.SelectionManagerCore</a></li><li><a href="sync.api.SpellChecker.html">sync.api.SpellChecker</a></li><li><a href="sync.api.UrlChooser.html">sync.api.UrlChooser</a></li><li><a href="sync.api.UrlChooser.Context.html">sync.api.UrlChooser.Context</a></li><li><a href="sync.api.WebappMessage.html">sync.api.WebappMessage</a></li><li><a href="sync.api.Workspace.html">sync.api.Workspace</a></li><li><a href="sync.api.Workspace.BeforeEditorOpenedEvent.html">sync.api.Workspace.BeforeEditorOpenedEvent</a></li><li><a href="sync.api.Workspace.DashboardLifecycleEvent.html">sync.api.Workspace.DashboardLifecycleEvent</a></li><li><a href="sync.api.Workspace.EditorLifecycleEvent.html">sync.api.Workspace.EditorLifecycleEvent</a></li><li><a href="sync.api.WorkspaceActionsManager.html">sync.api.WorkspaceActionsManager</a></li><li><a href="sync.api.WrapperAuthorEditingSupport.html">sync.api.WrapperAuthorEditingSupport</a></li><li><a href="sync.api.WrapperEditingSupport.html">sync.api.WrapperEditingSupport</a></li><li><a href="sync.ext.Extension.html">sync.ext.Extension</a></li><li><a href="sync.ext.Registry.html">sync.ext.Registry</a></li><li><a href="sync.ext.WrapperExtension.html">sync.ext.WrapperExtension</a></li><li><a href="sync.formctrls.Enhancer.html">sync.formctrls.Enhancer</a></li><li><a href="sync.options.PluginsOptions.html">sync.options.PluginsOptions</a></li><li><a href="sync.view.ResourceDragHandler.html">sync.view.ResourceDragHandler</a></li><li><a href="sync.view.ViewManager.html">sync.view.ViewManager</a></li><li><a href="sync.view.ViewRenderer.html">sync.view.ViewRenderer</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="interfaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Interfaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Attr.html">Attr</a></li><li><a href="Comment.html">Comment</a></li><li><a href="Document.html">Document</a></li><li><a href="Element.html">Element</a></li><li><a href="EntityRef.html">EntityRef</a></li><li><a href="NamedNodeMap.html">NamedNodeMap</a></li><li><a href="Node.html">Node</a></li><li><a href="NodeList.html">NodeList</a></li><li><a href="ProcessingInstruction.html">ProcessingInstruction</a></li><li><a href="sync.api.FileServer.html">sync.api.FileServer</a></li><li><a href="sync.api.FileServer.EntryDescriptor.html">sync.api.FileServer.EntryDescriptor</a></li><li><a href="sync.api.GuidingArrowRenderer.html">sync.api.GuidingArrowRenderer</a></li><li><a href="sync.api.math.Rect.html">sync.api.math.Rect</a></li><li><a href="Text.html">Text</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="tutorial-customaction.html">Implementing a Custom Action</a></li><li><a href="tutorial-customattributeaction.html">Implementing a Custom Action for Editing an Attribute Value</a></li><li><a href="tutorial-customview.html">Customizing the Side Views</a></li><li><a href="tutorial-dialog.html">Presenting a Dialog to the User</a></li><li><a href="tutorial-formcontrol.html">Implementing a Custom Form Control</a></li><li><a href="tutorial-loadingoptions.html">Customising the Editor using Loading Options</a></li><li><a href="tutorial-mentions.html">Implementing a Custom Mentions (User @mention) Provider</a></li><li><a href="tutorial-modifydoc.html">Modifying the Document</a></li><li><a href="tutorial-operationwithresult.html">Retrieving Information About the Current Document by Invoking Java Operations from JavaScript Code</a></li><li><a href="tutorial-removeaction.html">How to Remove a Toolbar Button</a></li><li><a href="tutorial-reviewcommenthook.html">Intercepting and Reacting to Review Comments</a></li><li><a href="tutorial-showtableproperties.html">Show Table Properties action for custom table</a></li><li><a href="tutorial-urlchooser.html">Using a Custom URL Chooser</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#beforeCommentAdded">beforeCommentAdded</a></li><li><a href="global.html#beforeCommentEdited">beforeCommentEdited</a></li><li><a href="global.html#commentAdded">commentAdded</a></li><li><a href="global.html#commentEdited">commentEdited</a></li><li><a href="global.html#createSelectionAroundOffsets">createSelectionAroundOffsets</a></li><li><a href="global.html#editorChanged">editorChanged</a></li><li><a href="global.html#getAuthorName">getAuthorName</a></li><li><a href="global.html#getCommentText">getCommentText</a></li><li><a href="global.html#getIcon">getIcon</a></li><li><a href="global.html#getMentionedUserNames">getMentionedUserNames</a></li><li><a href="global.html#getTimestamp">getTimestamp</a></li><li><a href="global.html#getTitle">getTitle</a></li><li><a href="global.html#getToolbarActionsMap">getToolbarActionsMap</a></li><li><a href="global.html#getToolbarDescriptor">getToolbarDescriptor</a></li><li><a href="global.html#getUserMentionsProposals">getUserMentionsProposals</a></li><li><a href="global.html#install">install</a></li><li><a href="global.html#opened">opened</a></li><li><a href="global.html#refreshNodes">refreshNodes</a></li><li><a href="global.html#registerReviewCommentHook">registerReviewCommentHook</a></li><li><a href="global.html#setUserMentionProposalsProvider">setUserMentionProposalsProvider</a></li><li><a href="global.html#supportsEditor">supportsEditor</a></li><li><a href="global.html#workspace">workspace</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Interface: Comment</h1>
+<section>
+
+<header>
+    
+        <h2>
+        Comment
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">Interface for XML comments.</div>
+        
+
+        
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The text.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>length</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The length of the text.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Node.html">Node</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="compareDocumentPosition"><span class="type-signature"></span>compareDocumentPosition(other)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Compares the reference node, i.e. the node on which this method is being called, with a node, i.e. the one passed asa parameter, with regard to their position in the document and according to the document order.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>other</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Node.html">Node</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The node to compare to.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Node.html#compareDocumentPosition">Node#compareDocumentPosition</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A bitmask with the following values from the Node class:  <li> DOCUMENT_POSITION_CONTAINED_BY - The node is contained by the reference node.     A node which is contained is always following, too.  <li> DOCUMENT_POSITION_CONTAINS - The node contains the reference node. A node which contains is always     preceding, too.  <li>DOCUMENT_POSITION_DISCONNECTED - The two nodes are disconnected. Order between disconnected nodes is    always implementation-specific.  <li>DOCUMENT_POSITION_FOLLOWING - The node follows the reference node.  <li>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC - The determination of preceding versus following is    implementation-specific.  <li>DOCUMENT_POSITION_PRECEDING - The second node precedes the reference node.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hasAttributes"><span class="type-signature"></span>hasAttributes()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns true if the node has attributes.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Node.html#hasAttributes">Node#hasAttributes</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    if the node has attributes.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">true</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hasChildNodes"><span class="type-signature"></span>hasChildNodes()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns whether this node has any children.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Node.html#hasChildNodes">Node#hasChildNodes</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Node.html#hasChildNodes">Node#hasChildNodes</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    true if the node has child nodes.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="isEqualNode"><span class="type-signature"></span>isEqualNode(other)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Test if two nodes have the same structure.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>other</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Node.html">Node</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The node to compare to.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Node.html#isEqualNode">Node#isEqualNode</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    true if the two nodes have the same structure.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="isSameNode"><span class="type-signature"></span>isSameNode(other)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        The API may return different JS DOM objects for the same XML node - to detect this case, use this method.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>other</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Node.html">Node</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The node to compare to.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Node.html#isSameNode">Node#isSameNode</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    true if the two objects represent the same XML node.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="lookupNamespaceURI"><span class="type-signature"></span>lookupNamespaceURI(prefix)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Look up the namespace URI associated to the given prefix, starting from this node.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>prefix</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URI of the namespace.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Node.html#lookupNamespaceURI">Node#lookupNamespaceURI</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    the mapped namespace URI.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="lookupPrefix"><span class="type-signature"></span>lookupPrefix(namespaceURI)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Look up the prefix associated to the given namespace URI, starting from this node. The default namespace  declarations are ignored by this method.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>namespaceURI</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URI of the namespace.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Node.html#lookupPrefix">Node#lookupPrefix</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    the associated prefix, or null if there is no associated prefix. If there are multiple mappings,  return the closest one to this node.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+	<style>.navbar-fixed-top { position: static !important; } .page-title {color: #000 !important;} .jsdoc-message{display:none;} .sunlight-menu {display:none;}</style>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a>
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

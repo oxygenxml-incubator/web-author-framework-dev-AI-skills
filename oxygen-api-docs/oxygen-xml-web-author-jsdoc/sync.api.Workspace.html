@@ -1,0 +1,6429 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Oxygen XML Web Author Class: Workspace</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.dark.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.readable.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Oxygen XML Web Author</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="sync.html">sync</a></li><li><a href="sync.actions.html">sync.actions</a></li><li><a href="sync.actions.findreplace.html">sync.actions.findreplace</a></li><li><a href="sync.api.html">sync.api</a></li><li><a href="sync.api.change_tracking.html">sync.api.change_tracking</a></li><li><a href="sync.api.dom.html">sync.api.dom</a></li><li><a href="sync.api.math.html">sync.api.math</a></li><li><a href="sync.api.Translation.html">sync.api.Translation</a></li><li><a href="sync.ext.html">sync.ext</a></li><li><a href="sync.formctrls.html">sync.formctrls</a></li><li><a href="sync.options.html">sync.options</a></li><li><a href="sync.view.html">sync.view</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="goog.Disposable.html">goog.Disposable</a></li><li><a href="goog.events.Event.html">goog.events.Event</a></li><li><a href="goog.events.EventTarget.html">goog.events.EventTarget</a></li><li><a href="HighlightsManager.html">HighlightsManager</a></li><li><a href="module.exports.html">module.exports</a></li><li><a href="sync.actions.AbstractAction.html">sync.actions.AbstractAction</a></li><li><a href="sync.actions.AttributeEditingAction.html">sync.actions.AttributeEditingAction</a></li><li><a href="sync.actions.AttributeEditingActionsProvider.html">sync.actions.AttributeEditingActionsProvider</a></li><li><a href="sync.actions.DropAction.html">sync.actions.DropAction</a></li><li><a href="sync.actions.OpenAction.html">sync.actions.OpenAction</a></li><li><a href="sync.api.ActionsManager.html">sync.api.ActionsManager</a></li><li><a href="sync.api.ActionsManagerCore.html">sync.api.ActionsManagerCore</a></li><li><a href="sync.api.AuthorEditingSupport.AuthorModelChangedEvent.html">sync.api.AuthorEditingSupport.AuthorModelChangedEvent</a></li><li><a href="sync.api.AuthorEditingSupport.ModelChangedMutation.html">sync.api.AuthorEditingSupport.ModelChangedMutation</a></li><li><a href="sync.api.AuthorWidgetsFactory.html">sync.api.AuthorWidgetsFactory</a></li><li><a href="sync.api.ChangeTrackingManager.html">sync.api.ChangeTrackingManager</a></li><li><a href="sync.api.ConcurrentEditingManager.html">sync.api.ConcurrentEditingManager</a></li><li><a href="sync.api.CreateDocumentAction.html">sync.api.CreateDocumentAction</a></li><li><a href="sync.api.Dialog.html">sync.api.Dialog</a></li><li><a href="sync.api.Dialog.SizeChangedEvent.html">sync.api.Dialog.SizeChangedEvent</a></li><li><a href="sync.api.EditImageMapAction.html">sync.api.EditImageMapAction</a></li><li><a href="sync.api.EditingContextManager.html">sync.api.EditingContextManager</a></li><li><a href="sync.api.EditingSupport.html">sync.api.EditingSupport</a></li><li><a href="sync.api.EditingSupport.DirtyStatusChangedEvent.html">sync.api.EditingSupport.DirtyStatusChangedEvent</a></li><li><a href="sync.api.EditingSupportManager.html">sync.api.EditingSupportManager</a></li><li><a href="sync.api.Editor.html">sync.api.Editor</a></li><li><a href="sync.api.Editor.ActionsLoadedEvent.html">sync.api.Editor.ActionsLoadedEvent</a></li><li><a href="sync.api.Editor.DirtyStatusChangedEvent.html">sync.api.Editor.DirtyStatusChangedEvent</a></li><li><a href="sync.api.Editor.LinkOpenedEvent.html">sync.api.Editor.LinkOpenedEvent</a></li><li><a href="sync.api.Editor.WebappMessageReceived.html">sync.api.Editor.WebappMessageReceived</a></li><li><a href="sync.api.FileBrowsingDialog.html">sync.api.FileBrowsingDialog</a></li><li><a href="sync.api.FileBrowsingDialog.FolderEntryDescriptor.html">sync.api.FileBrowsingDialog.FolderEntryDescriptor</a></li><li><a href="sync.api.FileBrowsingDialog.UserActionRequiredEvent.html">sync.api.FileBrowsingDialog.UserActionRequiredEvent</a></li><li><a href="sync.api.FileServersManager.html">sync.api.FileServersManager</a></li><li><a href="sync.api.HighlightUpdateEvent.html">sync.api.HighlightUpdateEvent</a></li><li><a href="sync.api.NotificationsManager.html">sync.api.NotificationsManager</a></li><li><a href="sync.api.PersistentHighlightsManager.html">sync.api.PersistentHighlightsManager</a></li><li><a href="sync.api.PersistentHighlightUpdateEvent.html">sync.api.PersistentHighlightUpdateEvent</a></li><li><a href="sync.api.PositionInformation.html">sync.api.PositionInformation</a></li><li><a href="sync.api.Selection.html">sync.api.Selection</a></li><li><a href="sync.api.SelectionCore.html">sync.api.SelectionCore</a></li><li><a href="sync.api.SelectionManager.html">sync.api.SelectionManager</a></li><li><a href="sync.api.SelectionManagerCore.html">sync.api.SelectionManagerCore</a></li><li><a href="sync.api.SpellChecker.html">sync.api.SpellChecker</a></li><li><a href="sync.api.UrlChooser.html">sync.api.UrlChooser</a></li><li><a href="sync.api.UrlChooser.Context.html">sync.api.UrlChooser.Context</a></li><li><a href="sync.api.WebappMessage.html">sync.api.WebappMessage</a></li><li><a href="sync.api.Workspace.html">sync.api.Workspace</a></li><li><a href="sync.api.Workspace.BeforeEditorOpenedEvent.html">sync.api.Workspace.BeforeEditorOpenedEvent</a></li><li><a href="sync.api.Workspace.DashboardLifecycleEvent.html">sync.api.Workspace.DashboardLifecycleEvent</a></li><li><a href="sync.api.Workspace.EditorLifecycleEvent.html">sync.api.Workspace.EditorLifecycleEvent</a></li><li><a href="sync.api.WorkspaceActionsManager.html">sync.api.WorkspaceActionsManager</a></li><li><a href="sync.api.WrapperAuthorEditingSupport.html">sync.api.WrapperAuthorEditingSupport</a></li><li><a href="sync.api.WrapperEditingSupport.html">sync.api.WrapperEditingSupport</a></li><li><a href="sync.ext.Extension.html">sync.ext.Extension</a></li><li><a href="sync.ext.Registry.html">sync.ext.Registry</a></li><li><a href="sync.ext.WrapperExtension.html">sync.ext.WrapperExtension</a></li><li><a href="sync.formctrls.Enhancer.html">sync.formctrls.Enhancer</a></li><li><a href="sync.options.PluginsOptions.html">sync.options.PluginsOptions</a></li><li><a href="sync.view.ResourceDragHandler.html">sync.view.ResourceDragHandler</a></li><li><a href="sync.view.ViewManager.html">sync.view.ViewManager</a></li><li><a href="sync.view.ViewRenderer.html">sync.view.ViewRenderer</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="interfaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Interfaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Attr.html">Attr</a></li><li><a href="Comment.html">Comment</a></li><li><a href="Document.html">Document</a></li><li><a href="Element.html">Element</a></li><li><a href="EntityRef.html">EntityRef</a></li><li><a href="NamedNodeMap.html">NamedNodeMap</a></li><li><a href="Node.html">Node</a></li><li><a href="NodeList.html">NodeList</a></li><li><a href="ProcessingInstruction.html">ProcessingInstruction</a></li><li><a href="sync.api.FileServer.html">sync.api.FileServer</a></li><li><a href="sync.api.FileServer.EntryDescriptor.html">sync.api.FileServer.EntryDescriptor</a></li><li><a href="sync.api.GuidingArrowRenderer.html">sync.api.GuidingArrowRenderer</a></li><li><a href="sync.api.math.Rect.html">sync.api.math.Rect</a></li><li><a href="Text.html">Text</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="tutorial-customaction.html">Implementing a Custom Action</a></li><li><a href="tutorial-customattributeaction.html">Implementing a Custom Action for Editing an Attribute Value</a></li><li><a href="tutorial-customview.html">Customizing the Side Views</a></li><li><a href="tutorial-dialog.html">Presenting a Dialog to the User</a></li><li><a href="tutorial-formcontrol.html">Implementing a Custom Form Control</a></li><li><a href="tutorial-loadingoptions.html">Customising the Editor using Loading Options</a></li><li><a href="tutorial-mentions.html">Implementing a Custom Mentions (User @mention) Provider</a></li><li><a href="tutorial-modifydoc.html">Modifying the Document</a></li><li><a href="tutorial-operationwithresult.html">Retrieving Information About the Current Document by Invoking Java Operations from JavaScript Code</a></li><li><a href="tutorial-removeaction.html">How to Remove a Toolbar Button</a></li><li><a href="tutorial-reviewcommenthook.html">Intercepting and Reacting to Review Comments</a></li><li><a href="tutorial-showtableproperties.html">Show Table Properties action for custom table</a></li><li><a href="tutorial-urlchooser.html">Using a Custom URL Chooser</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#beforeCommentAdded">beforeCommentAdded</a></li><li><a href="global.html#beforeCommentEdited">beforeCommentEdited</a></li><li><a href="global.html#commentAdded">commentAdded</a></li><li><a href="global.html#commentEdited">commentEdited</a></li><li><a href="global.html#createSelectionAroundOffsets">createSelectionAroundOffsets</a></li><li><a href="global.html#editorChanged">editorChanged</a></li><li><a href="global.html#getAuthorName">getAuthorName</a></li><li><a href="global.html#getCommentText">getCommentText</a></li><li><a href="global.html#getIcon">getIcon</a></li><li><a href="global.html#getMentionedUserNames">getMentionedUserNames</a></li><li><a href="global.html#getTimestamp">getTimestamp</a></li><li><a href="global.html#getTitle">getTitle</a></li><li><a href="global.html#getToolbarActionsMap">getToolbarActionsMap</a></li><li><a href="global.html#getToolbarDescriptor">getToolbarDescriptor</a></li><li><a href="global.html#getUserMentionsProposals">getUserMentionsProposals</a></li><li><a href="global.html#install">install</a></li><li><a href="global.html#opened">opened</a></li><li><a href="global.html#refreshNodes">refreshNodes</a></li><li><a href="global.html#registerReviewCommentHook">registerReviewCommentHook</a></li><li><a href="global.html#setUserMentionProposalsProvider">setUserMentionProposalsProvider</a></li><li><a href="global.html#supportsEditor">supportsEditor</a></li><li><a href="global.html#workspace">workspace</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: Workspace</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="sync.html">sync</a><a href="sync.api.html">.api</a>.</span>
+        
+        Workspace
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="Workspace"><span class="type-signature"></span>new Workspace()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Access to the Workspace in which the editor is opened.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="goog.events.EventTarget.html">goog.events.EventTarget</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="sync.api.Workspace.BeforeEditorOpenedEvent.html">BeforeEditorOpenedEvent</a></dt>
+            <dd></dd>
+        
+            <dt><a href="sync.api.Workspace.DashboardLifecycleEvent.html">DashboardLifecycleEvent</a></dt>
+            <dd></dd>
+        
+            <dt><a href="sync.api.Workspace.EditorLifecycleEvent.html">EditorLifecycleEvent</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id=".EventType">
+    <h4 id=".EventType"><span class="type-signature">&lt;static> </span>EventType<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The types of the sync.api.Workspace events.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>BEFORE_EDITOR_LOADED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    before_editor_loaded
+                
+                </td>
+            
+
+            <td class="description last">Triggered before the editor content was loaded.Note that frameworks code cannot use this event since the framework is detected while the document is loaded.<br/>See <a href="sync.api.Workspace.BeforeEditorOpenedEvent.html">sync.api.Workspace.BeforeEditorOpenedEvent</a> for more details.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EDITOR_LOADED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    editor_loaded
+                
+                </td>
+            
+
+            <td class="description last">Triggered after the editor was loaded.<br/>See <a href="sync.api.Workspace.EditorLifecycleEvent.html">sync.api.Workspace.EditorLifecycleEvent</a> for more details.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EDITOR_LOADING_FAILED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    editor_loading_failed
+                
+                </td>
+            
+
+            <td class="description last">Triggered after the editor was loaded.<br/>See <a href="sync.api.Workspace.EditorLifecycleEvent.html">sync.api.Workspace.EditorLifecycleEvent</a> for more details.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EDITOR_DISPOSED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    editor_disposed
+                
+                </td>
+            
+
+            <td class="description last">Triggered when the editor was disposed.<br/>See <a href="sync.api.Workspace.EditorLifecycleEvent.html">sync.api.Workspace.EditorLifecycleEvent</a> for more details.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BEFORE_EDITOR_DISPOSED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    before_editor_disposed
+                
+                </td>
+            
+
+            <td class="description last">Triggered before the editor will be disposed.<br/>See <a href="sync.api.Workspace.EditorLifecycleEvent.html">sync.api.Workspace.EditorLifecycleEvent</a> for more details.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BEFORE_DASHBOARD_LOADED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    before_dashboard_loaded
+                
+                </td>
+            
+
+            <td class="description last">Triggered before the dashboard is loaded.<br/>See <a href="sync.api.Workspace.DashboardLifecycleEvent.html">sync.api.Workspace.DashboardLifecycleEvent</a> for more details.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DASHBOARD_LOADED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    dashboard_loaded
+                
+                </td>
+            
+
+            <td class="description last">Triggered after the dashboard was loaded.<br/>See <a href="sync.api.Workspace.DashboardLifecycleEvent.html">sync.api.Workspace.DashboardLifecycleEvent</a> for more details.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".createEditorStripe"><span class="type-signature">&lt;static> </span>createEditorStripe(height [, first] [, below])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Create and add a stripe above/below the editor.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The height of the stripe in pixels.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>first</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag that causes the stripe to be added first (false by default).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>below</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag that causes the stripe to be added below the editor (false by default).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>26</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The stripe element.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Element.html">Element</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addOnDisposeCallback"><span class="type-signature"></span>addOnDisposeCallback(callback [, opt_scope])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Invokes a callback function when this object is disposed. Callbacks are
+invoked in the order in which they were added. If a callback is added to
+an already disposed Disposable, it will be called immediately.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The callback function.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">T</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An optional scope to call the callback in.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.Disposable.html#addOnDisposeCallback">goog.Disposable#addOnDisposeCallback</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addRelativeReferencesResolver"><span class="type-signature"></span>addRelativeReferencesResolver(protocol, resolver)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Web Author prefers to insert the external references as relative URLs. It has a default algorithm tomake an URL relative to a given base. However, you for certain URL protocols you can provide your ownalgorithm.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>protocol</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The protocol handled by the resolver.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resolver</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The relative references resolver. The first argument the URL used as abase for relativization and the second one is is the URL to makerelative .</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="createDialog"><span class="type-signature"></span>createDialog( [opt_id])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Creates a dialog that can have custom content and behavior.The advantage of using this method is that the dialog will have a consistent appearance with the rest of the applicationand that it will work on all devices supported by the WebApp.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The id that will be given to the dialog box.For example, you can use it for specifying the width of the dialog in CSS.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The dialog.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="sync.api.Dialog.html">sync.api.Dialog</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="dispatchEvent"><span class="type-signature"></span>dispatchEvent(e)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Dispatches an event (or event like object) and calls all listeners
+listening for events of this type. The type of the event is decided by the
+type property on the event object.
+
+If any of the listeners returns false OR calls preventDefault then this
+function will return false.  If one of the capture listeners calls
+stopPropagation, then the bubble listeners won't fire.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>e</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type"><a href="goog.events.Event.html">goog.events.Event</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Event object.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.events.EventTarget.html#dispatchEvent">goog.events.EventTarget#dispatchEvent</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    If anyone called preventDefault on the event object (or
+    if any of the listeners returns false) this will also return false.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="dispose"><span class="type-signature"></span>dispose()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Disposes of the object. If the object hasn't already been disposed of, calls
+#disposeInternal. Classes that extend `goog.Disposable` should
+override #disposeInternal in order to delete references to COM
+objects, DOM nodes, and other disposable objects. Reentrant.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.Disposable.html#dispose">goog.Disposable#dispose</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    Nothing.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getEditingContextManager"><span class="type-signature"></span>getEditingContextManager()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Return the editing context manager.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The editing context manager.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="sync.api.EditingContextManager.html">sync.api.EditingContextManager</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getEditingSupportManager"><span class="type-signature"></span>getEditingSupportManager()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns the editing support manager that can be used to create a specific <a href="sync.api.EditingSupport.html">sync.api.EditingSupport</a> to the currenteditor.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>21.1.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The editing support manager.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="sync.api.EditingSupportManager.html">sync.api.EditingSupportManager</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getFileServersManager"><span class="type-signature"></span>getFileServersManager()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns the file servers manager helper object that can be used to register a descriptor that providesrendering information and file browsing functionality for a specific file server.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>20.1.1</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The file servers manager.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="sync.api.FileServersManager.html">sync.api.FileServersManager</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getNotificationManager"><span class="type-signature"></span>getNotificationManager()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns an object that can be used to display notifications to the user.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    the notifications manager.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="sync.api.NotificationsManager.html">sync.api.NotificationsManager</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getOption"><span class="type-signature"></span>getOption(optionKey, defaultValue)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Client options getter function.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>optionKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">{sync.api.Workspace.Options} property name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>defaultValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the default value to be returned in case the option is not set.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    the set option. In case the option is not set it returns the defaultValue or null.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getParentEventTarget"><span class="type-signature"></span>getParentEventTarget()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns the parent of this event target to use for bubbling.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.events.EventTarget.html#getParentEventTarget">goog.events.EventTarget#getParentEventTarget</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The parent EventTarget or null if
+    there is no parent.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="goog.events.EventTarget.html">goog.events.EventTarget</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getUrlChooser"><span class="type-signature"></span>getUrlChooser()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns the URL chooser used when the user is asked to provide an URL.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The currently registered URL chooser.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="sync.api.UrlChooser.html">sync.api.UrlChooser</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getViewManager"><span class="type-signature"></span>getViewManager()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns the view manager helper object that can be used to customize Oxygen XML Web Author views.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The view manager.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="sync.view.ViewManager.html">sync.view.ViewManager</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="isDisposed"><span class="type-signature"></span>isDisposed()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.Disposable.html#isDisposed">goog.Disposable#isDisposed</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    Whether the object has been disposed of.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="listen"><span class="type-signature"></span>listen(type, listener [, opt_useCapture] [, opt_listenerScope])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Adds an event listener. A listener can only be added once to an
+object and if it is added again the key for the listener is
+returned. Note that if the existing listener is a one-off listener
+(registered via listenOnce), it will no longer be a one-off
+listener after a call to listen().
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The event type id.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Callback
+    method.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_useCapture</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Whether to fire in capture phase
+    (defaults to false).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_listenerScope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">SCOPE</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Object in whose scope to call the
+    listener.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.events.EventTarget.html#listen">goog.events.EventTarget#listen</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="listenOnce"><span class="type-signature"></span>listenOnce(type, listener [, opt_useCapture] [, opt_listenerScope])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Adds an event listener that is removed automatically after the
+listener fired once.
+
+If an existing listener already exists, listenOnce will do
+nothing. In particular, if the listener was previously registered
+via listen(), listenOnce() will not turn the listener into a
+one-off listener. Similarly, if there is already an existing
+one-off listener, listenOnce does not modify the listeners (it is
+still a once listener).
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The event type id.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Callback
+    method.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_useCapture</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Whether to fire in capture phase
+    (defaults to false).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_listenerScope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">SCOPE</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Object in whose scope to call the
+    listener.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.events.EventTarget.html#listenOnce">goog.events.EventTarget#listenOnce</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="makeRelative"><span class="type-signature"></span>makeRelative(base, url)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Makes an URL relative to the base.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>base</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The relativization base, needs to be an absolute URL.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URL to make relative.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The relative URL.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="openLink"><span class="type-signature"></span>openLink(e)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Open a link with the behavior determined by the provided event.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>e</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sync.api.Editor.LinkOpenedEvent.html">sync.api.Editor.LinkOpenedEvent</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The link opened event.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>25</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="registerDisposable"><span class="type-signature"></span>registerDisposable(disposable)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Associates a disposable object with this object so that they will be disposed
+together.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>disposable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">goog.disposable.IDisposable</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">that will be disposed when
+    this object is disposed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.Disposable.html#registerDisposable">goog.Disposable#registerDisposable</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeAllListeners"><span class="type-signature"></span>removeAllListeners( [opt_type])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Removes all listeners from this listenable. If type is specified,
+it will only remove listeners of the particular type. otherwise all
+registered listeners will be removed.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Type of event to remove, default is to
+    remove all types.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.events.EventTarget.html#removeAllListeners">goog.events.EventTarget#removeAllListeners</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    Number of listeners removed.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeEditorStripe"><span class="type-signature"></span>removeEditorStripe(stripe [, below])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Removes an editor stripe.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stripe</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Element.html">Element</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The stripe element.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>below</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag indicating if the stripe is placed below or above the editor (false by default).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+	<dt class="tag-since method-doc-label method-doc-details-label">Since:</dt>
+	<dd class="tag-since">
+		<ul class="dummy">
+			<li>26</li>
+		</ul>
+	</dd>
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setBaseFontFamily"><span class="type-signature"></span>setBaseFontFamily(fontFamily)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sets the base font family for all views and dialogs.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fontFamily</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The font family to apply (e.g., 'Arial, sans-serif').</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setOption"><span class="type-signature"></span>setOption(optionKey, newValue)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Client options setter function.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>optionKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">{sync.api.Workspace.Options} property name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>newValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the option's new value.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setStripesContainer"><span class="type-signature"></span>setStripesContainer(stripesContainer)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sets the stripes container.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stripesContainer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Element.html">Element</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The stripes container.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setUrlChooser"><span class="type-signature"></span>setUrlChooser(urlChooser)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Sets the URL chooser used when the user is asked to provide an URL.When there is not chooser set, the user will usually have to enter theURLs in a text field.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>urlChooser</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sync.api.UrlChooser.html">sync.api.UrlChooser</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URL chooser to set.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="unlisten"><span class="type-signature"></span>unlisten(type, listener [, opt_useCapture] [, opt_listenerScope])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Removes an event listener which was added with listen() or listenOnce().
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The event type id.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Callback
+    method.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_useCapture</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Whether to fire in capture phase
+    (defaults to false).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opt_listenerScope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">SCOPE</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Object in whose scope to call
+    the listener.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="goog.events.EventTarget.html#unlisten">goog.events.EventTarget#unlisten</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    Whether any listener was removed.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        <dl>
+                
+<hr>
+<dt class="name" id=".DashboardLoadingOptions">
+    <h4 id=".DashboardLoadingOptions">DashboardLoadingOptions</h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The options used to open the dashboard.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>folderUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URL of the folder to be opened on the dashboard.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fileServerName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the file server to be opened on the dashboard.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id=".LoadingOptions">
+    <h4 id=".LoadingOptions">LoadingOptions</h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The object used to open the editor.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The URL of the document.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The title of the document. If not specified, it is inferred from URL.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>userName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The name of the user which will edit the document.Used as the author for comments and displayed in the top-right corner.If not specified, it is inferred from the <i>userName</i> URL variable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The content of the document. If not specified, the server will load the contentfrom the given URL.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>modes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The available editing modes, comma-separated. If multiple values are passedin, the first one will be active and the user can switch to another one using the GUI. Possible values:<ul> <li>review - only the review actions are enabled <li>edit - full editing support is enabled</ul></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>trackChanges</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sync.api.change_tracking.html#.ChangeTrackingInitialState">sync.api.change_tracking.ChangeTrackingInitialState</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Controls the initial change-tracking state:             If you use an option different than 'default', the server change tracking status (as configured in the Administration Page)             should not be "Stored in the document".</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>autoSaveInterval</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">the interval of time (in seconds) to wait until an auto-save is performed.If <= 0 or falsy, auto-save is disabled.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>contentType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The content type of the edited document, "text/xml" for XML documents. The content encoding can be passed 'text/xml: charset=utf-8'.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>'show.caret.position.info'</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag that controls whether to show caret tooltip or not.Have precedence over the server option. Default value is true.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>'validate.as.you.type'</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Whether automatic validation should be enabled. Defaults to true.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ccOnEnter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag that controls whether the content completion list is presented when the user press 'Enter'. Has precedence over thevalue of "Show content completion list on Enter" server option (controlled from "General" option page).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>elementNameEnhancer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="sync.api.html#.ElementNameEnhancer">sync.api.ElementNameEnhancer</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A function which can enhance the name of elements depending on their attributes.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>'stylesheet-titles'</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A list of titles of CSS groups (defined in the framework) that willbe used to render the document. The list can be passed either as a JS array or concatenated as a comma-separated string.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expandTopicRefs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">If set to true, when a DITA map is opened in Oxygen XML Web Author, the content of all topics referenced in the map will be presented.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>KeyscopeStack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">(DITA-specific Parameter) Used for resolving keys when DITA 1.3 key scopes are defined in the DITA map.The value looks like this:  `a b c,d e f` for a DITA map that has the key scope defined like this: <topicref keyscope="a b c"><topicref keyscope="d e f"/></topicref></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>backupTimeout</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The time to wait, after an edit, before making a backup.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>compactTagsMode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag that controls whether the consecutive block tags are displayed on the same line(when the value is true) or on separate lines (when the value is false). Default value is true.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>quickUpDownNavigation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">This option is false by default and this means that when the user navigates usingthe up and down arrow keys, the cursor is placed within each of the underlying XML elements between two blocks of text(the cursor changes to a horizontal line when it is between blocks of text). This allows to easily insert elementsand manage the structure of the XML content. However, if this option is true, the cursor ignores the XML structure andjumps from one line of text to another, similar to how the cursor behaves in a word processor.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>textModeReadOnly</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag that controls whether the text mode will be read-only. Defaults to false.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>readOnlyState</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Can be either the string `read-only` or an object  with a `reason` field that contains a message to be displayed in the user interface and a `code` that can be used,  for example, when rendering the read-only stripe of the editor {@see sync.api.Editor#setReadOnlyStripeRenderer}.  The `code` is a way to encode the `reason` that does not change according the the UI locale.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>'schematron.imposed.phase'</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Used to impose a phase with that name in any Schematron file used for validation.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>schematronUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">(Markdown only) Used to specify a Schematron file to validate the Markdown file with.It will only work for Markdown files, if the Markdown editing plugin is installed.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>showDitaMapView</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">(DITA-specific Parameter) whether to show the DITA Map View on load.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>editReferencesInPlace</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">(DITA-specific Parameter) allow inplace editing for referred content.If the opened document is a DITA Map, the content of all topics referenced in the map will be presented in the editor andit will be possible to be edited. Defaults to false.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>outlinePlacement</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Controls the side where the outline will be shown.Possible values:<ul>  <li> right  <li> left</ul></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>showTopicTitles</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">(DITA Map-specific Parameter) whether to resolve the topic titles for DITA Maps. Defaults to false.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>multipleNonFoldedChildren</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">`true` to display all children whose names are listed in the  `-oxy-not-foldable-child` CSS property. `false` to display only the first one. `true` by default.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>roomId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The ID of the concurrent editing room to join. This option should be added besides the usual `url` parameter  that specifies the URL of the document.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sharedSessionCompatible</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Can be set by a CMS-connector plugin to declare that a it is compatiblewith the [Editing Session Sharing feature|https://www.oxygenxml.com/doc/help.php?product=webauthor&pageId=webauthor-concurrent-editing-api}.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>inplaceReferenceEditingSupported</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">option to be set to mark that the connector supports editing references in-place.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>search.find</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Text to find</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>search.replace</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Replacement text that should be written in the find-replace dialog.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>search.matchCase</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag controlling the find-replace match-case option.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>search.wholeWords</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Flag controlling the find-replace whole-words option.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>searchMode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">controls in what UI component the find/replace form is rendered.Possible values:<ul> <li>dialog - the find/replace form is presented in a dialog. <li>view - the find/replace form is presented in a side-view.</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id=".Options">
+    <h4 id=".Options">Options</h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The object used to open the editor.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>'selected.language'</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The current language.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>'sentinels.display.mode'</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Controls the sentinels display mode.Possible values:<ul>  <li> no-tags - no tags.  <li> partial-tags - partial tags.  <li> inline-tags - inline tags.  <li> block-tags - block tags.  <li> full-tags - full tags.  <li> full-tags-with-attributes - full tags with attributes.</ul></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>'spellcheck.enabled'</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">controls whether the spellchecker is enabled or not. Possible values:<ul> <li> true - The spellchecker is enabled. <li> false - The spellchecker is disabled.</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            </dl>
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+	<style>.navbar-fixed-top { position: static !important; } .page-title {color: #000 !important;} .jsdoc-message{display:none;} .sunlight-menu {display:none;}</style>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a>
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
