@@ -1,5 +1,4 @@
-# Oxygen XML Web Author JavaScript API ${project.nosnapshot.version}
-
+# Oxygen XML Web Author JavaScript API 28.1
 ## API Pages
 
 - [Interface: Attr](Attr.md)
